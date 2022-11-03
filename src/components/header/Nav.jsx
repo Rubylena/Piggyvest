@@ -12,7 +12,8 @@ const Nav = () => {
   return (
     <nav>
         <img src={logo}></img>
-        <div onClick={activeHandle} className={isActive ? 'is-active' : ''}>
+        {/* className={isActive ? 'is-active' : ''} */}
+        <div onClick={activeHandle} className={`hamburger ${isActive ? 'is-active' : ''}`}>
           <span className='line'></span>
           <span className='line'></span>
           <span className='line'></span>

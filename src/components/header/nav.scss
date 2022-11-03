@@ -12,6 +12,9 @@ nav{
         margin: 6px;
         background-color: $hamburger;
     }
+    .hamburger{
+        background-color: blue;
+    }
     .is-active{
         .line:nth-child(2){
             width: 0;
