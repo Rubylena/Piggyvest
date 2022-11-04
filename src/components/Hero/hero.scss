@@ -1,0 +1,89 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.Hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+    padding: 5em 0 0;
+    font-size: 1.03125em;
+    &_left{
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5em;
+        h1{
+            font-size: 3.4375em;
+            line-height: 72px;
+            font-weight: 700;
+            font-family: U8-Bold;
+        }
+        p{
+            line-height: 27.2px;
+            color: $light-brown;
+        }
+        .create{
+            margin: auto;
+            background: $primary;
+            border-radius: 10px;
+            padding: 1.2em 1em;
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+            &:hover{
+                a:visited{
+                    background: $secondary;
+                }
+                background: $secondary;
+            }
+        }
+        .downloads{
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            a{
+                border: 1px solid $border;
+                text-decoration: none;
+                color: $primary;
+                padding: 1.2em 1em;
+                border-radius: 10px;
+                &:hover{
+                    border: 1px solid $secondary;
+                }
+                &:active{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    &_right{
+        max-width: 500px;
+        position: relative;
+        img:nth-child(1){
+            width: 50px;
+        }
+        img:nth-child(2){
+            width: 50px;
+        }
+        img:nth-child(3){
+            width: 50px;
+        }
+        img:nth-child(4){
+            width: 50px;
+        }
+    }
+    @include screen-size(desktop-only){
+        display: block;
+        &_left{
+            margin: auto;
+        }
+        &_right{
+            border: 1px solid red;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+header{
+    padding: 1em 1.3em 0;
+    background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    nav{
+        .nav_arrange{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 9em;
+            }
+        }
+        .desktop_menu{
+            display: block;
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 1.5em;
+                li{
+                    list-style: none;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: $primary;
+                        font-weight: 500;
+                        font-size: 1.03125em;
+                        &:active{
+                            color: $secondary;
+                        }
+                    }
+                }
+                li:nth-child(6){
+                    border: 1px solid $border;
+                    border-radius: 10px;
+                    padding: 1.2em 1em;
+                    &:hover{
+                        border: 1px solid $secondary;
+                        a:visited{
+                            color: $secondary;
+                        }
+                    }
+                }
+                li:nth-child(7){
+                    background: $primary;
+                    border-radius: 10px;
+                    padding: 1.2em 1em;
+                    a{
+                        color: $white;
+                    }
+                    &:hover{
+                        background: $secondary;
+                        a:visited{
+                            background: $secondary;
+                        }
+                    }
+                }
+            }
+            @include screen-size(desktop-only){
+                display: none;
+            }
+        }
+        .bar{
+            width: 28px;
+            height: 3px;
+            display: block;
+            text-align: left;
+            margin: 6px auto;
+            background-color: $light-brown;
+            @include transition;
+        }
+        .hamburger{
+            display: none;
+            @include screen-size(desktop-only){
+                display: block;
+            }
+        }
+        .is-active{
+            .bar:nth-child(1){
+                @include transform(45deg, 12px);
+            }
+            .bar:nth-child(2){
+                width: 0;
+            }
+            .bar:nth-child(3){
+                @include transform(135deg, 13px);
+            }
+        }
+    }
+
+    .mobile_menu{
+        display: none;
+        text-align: center;
+        padding: 3em 1em 0;
+        background: $white;
+        z-index: 2;
+        ul{
+            li{
+                list-style: none;
+                margin: 2em 0;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: $primary;
+                    font-weight: 500;
+                    font-size: 1.03125em;
+                    &:active{
+                        color: $secondary;
+                    }
+                }
+            }
+            li:nth-child(6){
+                border: 1px solid $border;
+                border-radius: 10px;
+                padding: 1.2em 0;
+                &:hover{
+                    border: 1px solid $secondary;
+                    a:visited{
+                        color: $secondary;
+                    }
+                }
+            }
+            li:nth-child(7){
+                background: $primary;
+                border-radius: 10px;
+                padding: 1.2em 0;
+                a{
+                    color: $white;
+                }
+                &:hover{
+                    background: $secondary;
+                    a:visited{
+                        background: $secondary;
+                    }
+                }
+            }
+        }
+        @include screen-size(desktop-only){
+            height: 90vh;
+            display: block;
+        }
+    }
+}

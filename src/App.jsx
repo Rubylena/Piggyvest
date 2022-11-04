@@ -1,11 +1,11 @@
-import Nav from "./components/header/Nav"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
-    <div>
-      <Nav />
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
 
