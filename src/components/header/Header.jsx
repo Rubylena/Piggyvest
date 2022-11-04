@@ -15,16 +15,18 @@ const Header = () => {
     <header>
       <nav>
         <div className='nav_arrange'>
-          <div>
+          <div className='logo_nav'>
             <img src={logo} alt='logo'></img>
+            <ul>
+              <li><a href='/index.html'>Save</a></li>
+              <li><a href='https://www.piggyvest.com/invest' target='_blank'>Invest</a></li>
+              <li><a href='https://www.piggyvest.com/stories' target='_blank'>Stories</a></li>
+              <li><a href='https://www.piggyvest.com/faq' target='_blank'>FAQs</a></li>
+              <li><a href='https://blog.piggyvest.com/' target='_blank'>Blog</a></li>
+            </ul>
           </div>
           <div className='desktop_menu'>
           <ul>
-            <li><a href='/index.html'>Save</a></li>
-            <li><a href='https://www.piggyvest.com/invest' target='_blank'>Invest</a></li>
-            <li><a href='https://www.piggyvest.com/stories' target='_blank'>Stories</a></li>
-            <li><a href='https://www.piggyvest.com/faq' target='_blank'>FAQs</a></li>
-            <li><a href='https://blog.piggyvest.com/' target='_blank'>Blog</a></li>
             <li><a href='https://dashboard.piggyvest.com/login' target='_blank'>Sign in</a></li>
             <li><a href='https://dashboard.piggyvest.com/register' target='_blank'>Create free account</a></li>
           </ul>

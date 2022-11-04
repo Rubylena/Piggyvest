@@ -1,4 +1,5 @@
 import React from 'react'
+import google from '../../assets/img/google-icon.svg'
 import frame from '../../assets/img/frame.png'
 import girl from '../../assets/img/headerImg.png'
 import rent from '../../assets/img/rent-card.png'
@@ -17,10 +18,11 @@ const Hero = () => {
             <div className='create'><a href='https://dashboard.piggyvest.com/register' target='_blank' >Create free account</a></div>
             <div className='downloads'>
                 <a href='https://dashboard.piggyvest.com/login' target='_blank'><i class="fa-brands fa-apple"></i>&nbsp; Get on iPhone</a>
-                <a href='https://dashboard.piggyvest.com/login' target='_blank'><i class="fa-brands fa-google-play"></i>&nbsp; Get on Android</a>
+                <a href='https://dashboard.piggyvest.com/login' target='_blank'><img src={google} alt='play store'></img>&nbsp; Get on Android</a>
             </div>
         </div>
         <div className='Hero_right'>
+          <div className='image_group'>
             <img src={frame} alt='frame'></img>
             <img src={girl} alt='girl'></img>
             <img src={rent} alt='frame'></img>
@@ -28,6 +30,7 @@ const Hero = () => {
             <img src={circle} alt='frame'></img>
             <img src={angle} alt='frame'></img>
             <img src={dots} alt='frame'></img>
+          </div>
         </div>
     </section>
   )

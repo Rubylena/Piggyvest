@@ -6,17 +6,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // gap: 10em
     color: $primary;
-    padding: 5em 0 0;
+    padding: 15em 3em 0;
     font-size: 1.03125em;
+    height: 100vh;
     &_left{
-        max-width: 500px;
+        // max-width: 500px;
         display: flex;
         flex-direction: column;
-        text-align: center;
         gap: 1.5em;
+        width: 50%;
+        @include screen-size(desktop-only){
+            text-align: center;
+        }
         h1{
-            font-size: 3.4375em;
+            font-size: 4.2em;
             line-height: 72px;
             font-weight: 700;
             font-family: U8-Bold;
@@ -26,10 +31,10 @@
             color: $light-brown;
         }
         .create{
-            margin: auto;
+            width: fit-content;
             background: $primary;
             border-radius: 10px;
-            padding: 1.2em 1em;
+            padding: 1.2em 2em;
             a{
                 color: $white;
                 text-decoration: none;
@@ -40,17 +45,26 @@
                 }
                 background: $secondary;
             }
+            @include screen-size(desktop-only){
+                margin: auto;
+            }
         }
         .downloads{
             display: flex;
             gap: 1em;
-            justify-content: center;
             a{
+                display: flex;
                 border: 1px solid $border;
                 text-decoration: none;
                 color: $primary;
                 padding: 1.2em 1em;
                 border-radius: 10px;
+                i{
+                    font-size: 26px;
+                }
+                img{
+                    width: 24px;
+                }
                 &:hover{
                     border: 1px solid $secondary;
                 }
@@ -58,31 +72,88 @@
                     color: $secondary;
                 }
             }
+            @include screen-size(phone-only){
+                flex-direction: column;
+                margin: auto;
+            }
+            @include screen-size(desktop-only){
+                justify-content: center;
+            }
+        }
+        @include screen-size(desktop-only){
+            h1{
+                font-size: 3em;
+            }
         }
     }
     &_right{
-        max-width: 500px;
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
         position: relative;
-        img:nth-child(1){
-            width: 50px;
-        }
-        img:nth-child(2){
-            width: 50px;
-        }
-        img:nth-child(3){
-            width: 50px;
-        }
-        img:nth-child(4){
-            width: 50px;
+        padding: 0 0 0 2em;
+        width: 50%;
+        .image_group{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            width: 60%;
+            img:nth-child(1){
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            img:nth-child(2){
+                position: absolute;
+                // position: relative;
+                top: 35px;
+                left: -45px;
+                width: 100%;
+            }
+            img:nth-child(3){
+                position: absolute;
+                top: 125px;
+                left: -135px;
+                width: 215px;
+            }
+            img:nth-child(4){
+                position: absolute;
+                top: 220px;
+                right: -80px;
+                width: 215px;
+            }
+            img:nth-child(5){
+                position: absolute;
+                top: 120px;
+                right: 25px;
+                width: 100%;
+                width: 35px;
+            }
+            img:nth-child(6){
+                position: absolute;
+                top: 0;
+                left: -80px;
+            }
+            img:nth-child(7){
+                position: absolute;
+                // bottom: 30px;
+                top: 255px;
+                left: -62px;
+            }
+            @include screen-size(desktop-only){
+
+            }
         }
     }
     @include screen-size(desktop-only){
         display: block;
+        padding: 7em 2em 0;
         &_left{
-            margin: auto;
+            margin: 0 auto 5em;
         }
         &_right{
-            border: 1px solid red;
             margin: auto;
         }
     }

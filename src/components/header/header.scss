@@ -3,19 +3,49 @@
 @import '../../styles/transition.scss';
 
 header{
-    padding: 1em 1.3em 0;
+    padding: 1.2em 3em;
     background: $white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
     nav{
         .nav_arrange{
             display: flex;
             justify-content: space-between;
             align-items: center;
             img{
-                width: 9em;
+                width: 11em;
+                @include screen-size(desktop-only){
+                    width: 9em;
+                }
+            }
+            .logo_nav{
+                display: flex;
+                gap: 2em;
+                ul{
+                    display: flex;
+                align-items: center;
+                gap: 2em;
+                    li{
+                        list-style: none;
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            text-decoration: none;
+                            color: $primary;
+                            font-weight: 500;
+                            font-size: 1.03125em;
+                            &:active{
+                                color: $secondary;
+                            }
+                        }
+                    }
+                    @include screen-size(desktop-only){
+                        display: none;
+                    }
+                }
             }
         }
         .desktop_menu{
@@ -23,7 +53,7 @@ header{
             ul{
                 display: flex;
                 align-items: center;
-                gap: 1.5em;
+                gap: 0.5em;
                 li{
                     list-style: none;
                     a{
@@ -31,17 +61,17 @@ header{
                         justify-content: center;
                         text-decoration: none;
                         color: $primary;
-                        font-weight: 500;
+                        font-weight: 700;
                         font-size: 1.03125em;
                         &:active{
                             color: $secondary;
                         }
                     }
                 }
-                li:nth-child(6){
+                li:nth-child(1){
                     border: 1px solid $border;
                     border-radius: 10px;
-                    padding: 1.2em 1em;
+                    padding: 1.2em 1.5em;
                     &:hover{
                         border: 1px solid $secondary;
                         a:visited{
@@ -49,12 +79,13 @@ header{
                         }
                     }
                 }
-                li:nth-child(7){
+                li:nth-child(2){
                     background: $primary;
                     border-radius: 10px;
                     padding: 1.2em 1em;
                     a{
                         color: $white;
+                        font-weight: 700;
                     }
                     &:hover{
                         background: $secondary;
