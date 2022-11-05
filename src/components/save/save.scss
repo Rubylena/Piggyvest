@@ -1,0 +1,14 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.security{
+    display: flex;
+    gap: 2em;
+    &_right{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+        flex-flow: row wrap;
+    }
+}

@@ -2,32 +2,46 @@
 @import '../../styles/mediaQueries.scss';
 @import '../../styles/transition.scss';
 
-header{
-    padding: 1.2em 3em;
-    background: $white;
+.scrolled{
+    background-color: $white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
+    padding: 1.5em 13em;
+    -webkit-box-shadow: 0 0 7px 0 #ced3da;
+    box-shadow: 0 0 7px 0 #ced3da;
+    transition: background-color 0.1s ease-in, box-shadow 0.3s ease-in-out;
+    @include screen-size(desktop-only){
+        padding: 1.5em 2em;
+    }
+    @include screen-size(desktop-plus){
+        padding: 1em 1em;
+    }
+}
+
+header{
+        width: 100%;
     nav{
         .nav_arrange{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include transition;
             img{
-                width: 11em;
+                width: 30%;
                 @include screen-size(desktop-only){
-                    width: 9em;
+                    width: 85%;
                 }
             }
             .logo_nav{
                 display: flex;
-                gap: 2em;
+                align-items: center;
+                gap: 3em;
                 ul{
                     display: flex;
-                align-items: center;
-                gap: 2em;
+                    gap: 2.5em;
                     li{
                         list-style: none;
                         a{
@@ -71,9 +85,13 @@ header{
                 li:nth-child(1){
                     border: 1px solid $border;
                     border-radius: 10px;
-                    padding: 1.2em 1.5em;
+                    padding: 1em 1.5em;
+                    background: $white;
                     &:hover{
                         border: 1px solid $secondary;
+                        a:hover{
+                            color: $secondary;
+                        }
                         a:visited{
                             color: $secondary;
                         }
@@ -82,7 +100,7 @@ header{
                 li:nth-child(2){
                     background: $primary;
                     border-radius: 10px;
-                    padding: 1.2em 1em;
+                    padding: 1em 1.5em;
                     a{
                         color: $white;
                         font-weight: 700;
@@ -179,5 +197,11 @@ header{
             height: 90vh;
             display: block;
         }
+    }
+    @include screen-size(desktop-plus){
+        padding: 1.5em 1em 0;
+    }
+    @include screen-size(larger-screen){
+        padding: 1em 13em;
     }
 }

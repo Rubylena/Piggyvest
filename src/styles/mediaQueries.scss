@@ -8,4 +8,10 @@
     @else if $size == desktop-only {
         @media (max-width: 991px){@content;}
     }
+    @else if $size == desktop-plus {
+        @media (min-width: 991px) and (max-width: 1200px) {@content;}
+    }
+    @else if $size == larger-screen {
+        @media (min-width: 1200px) {@content;}
+    }
 }

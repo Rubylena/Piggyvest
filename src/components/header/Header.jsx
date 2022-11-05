@@ -5,14 +5,26 @@ import './header.scss'
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [colorChange, setColorChange] = useState(false);
 
   const activeHandle = ()=>{
     setIsActive(addClass => !addClass);
     setOpenMenu(show => !show);
   }
 
+  const changeNavbarColor = () =>{
+     if(window.scrollY){
+       setColorChange(true);
+     }
+     else{
+       setColorChange(false);
+     }
+  }
+
+  window.addEventListener('scroll', changeNavbarColor);
+
   return (
-    <header>
+    <header className={colorChange ? 'scrolled' : ''}>
       <nav>
         <div className='nav_arrange'>
           <div className='logo_nav'>

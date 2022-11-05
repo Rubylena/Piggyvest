@@ -1,0 +1,24 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.create{
+    width: fit-content;
+    background: $primary;
+    border-radius: 10px;
+    padding: 1em 1em;
+    a{
+        color: $white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    a:visited{
+        background: $secondary;
+    }
+    &:hover{
+        background: $secondary;
+    }
+    @include screen-size(desktop-only){
+        margin: auto;
+    }
+}

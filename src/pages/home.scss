@@ -1,0 +1,31 @@
+@import '../styles/colors.scss';
+@import '../styles/mediaQueries.scss';
+@import '../styles/transition.scss';
+
+.home_container{
+    @include screen-size(desktop-only){
+        padding: 1.5em 2em;
+    }
+}
+.home_header_bg{
+    @include screen-size(larger-screen){
+        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(66.5%,#fff),color-stop(66.5%,#f8f9fa),color-stop(94.5%,#f8f9fa),color-stop(94.5%,#fff),color-stop(0,#fff));
+        background: -webkit-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+        background: -moz-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 66.5%,#f8f9fa 94.5%,#fff 94.5%,#fff 0);
+        background: linear-gradient(90deg,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+    }
+    @include screen-size(desktop-plus){
+        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(66.5%,#fff),color-stop(66.5%,#f8f9fa),color-stop(94.5%,#f8f9fa),color-stop(94.5%,#fff),color-stop(0,#fff));
+        background: -webkit-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+        background: -moz-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 66.5%,#f8f9fa 94.5%,#fff 94.5%,#fff 0);
+        background: linear-gradient(90deg,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+    }
+}
+.main_container{
+    @include screen-size(desktop-plus){
+        padding: 0 1em;
+    }
+    @include screen-size(larger-screen){
+        padding: 0 13em;
+    }
+}

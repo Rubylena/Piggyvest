@@ -6,13 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // gap: 10em
     color: $primary;
-    padding: 15em 3em 0;
     font-size: 1.03125em;
     height: 100vh;
+    gap: 2.4em;
+    @include transition;
     &_left{
-        // max-width: 500px;
         display: flex;
         flex-direction: column;
         gap: 1.5em;
@@ -21,7 +20,7 @@
             text-align: center;
         }
         h1{
-            font-size: 4.2em;
+            font-size: 4em;
             line-height: 72px;
             font-weight: 700;
             font-family: U8-Bold;
@@ -29,25 +28,6 @@
         p{
             line-height: 27.2px;
             color: $light-brown;
-        }
-        .create{
-            width: fit-content;
-            background: $primary;
-            border-radius: 10px;
-            padding: 1.2em 2em;
-            a{
-                color: $white;
-                text-decoration: none;
-            }
-            &:hover{
-                a:visited{
-                    background: $secondary;
-                }
-                background: $secondary;
-            }
-            @include screen-size(desktop-only){
-                margin: auto;
-            }
         }
         .downloads{
             display: flex;
@@ -57,7 +37,7 @@
                 border: 1px solid $border;
                 text-decoration: none;
                 color: $primary;
-                padding: 1.2em 1em;
+                padding: 0.5em 1em;
                 border-radius: 10px;
                 i{
                     font-size: 26px;
@@ -82,13 +62,12 @@
         }
         @include screen-size(desktop-only){
             h1{
-                font-size: 3em;
+                font-size: 3.1em;
             }
         }
     }
     &_right{
         display: flex;
-        // flex-direction: column;
         justify-content: center;
         position: relative;
         padding: 0 0 0 2em;
@@ -98,7 +77,8 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            width: 60%;
+            // transition: width 0.3s ease-in 1s;
+            width: 70%;
             img:nth-child(1){
                 position: relative;
                 top: 0;
@@ -107,54 +87,139 @@
             }
             img:nth-child(2){
                 position: absolute;
-                // position: relative;
                 top: 35px;
                 left: -45px;
                 width: 100%;
             }
             img:nth-child(3){
                 position: absolute;
-                top: 125px;
-                left: -135px;
+                top: 170px;
+                left: -143px;
                 width: 215px;
             }
             img:nth-child(4){
                 position: absolute;
-                top: 220px;
-                right: -80px;
+                top: 400px;
+                right: -64px;
                 width: 215px;
             }
             img:nth-child(5){
                 position: absolute;
-                top: 120px;
+                top: 170px;
                 right: 25px;
                 width: 100%;
-                width: 35px;
+                width: 40px;
             }
             img:nth-child(6){
                 position: absolute;
                 top: 0;
-                left: -80px;
+                left: -81px;
             }
             img:nth-child(7){
                 position: absolute;
-                // bottom: 30px;
-                top: 255px;
-                left: -62px;
+                top: 352px;
+                left: -63px;
             }
-            @include screen-size(desktop-only){
-
+            @include screen-size(tablet-only){
+                img:nth-child(3){
+                    position: absolute;
+                    top: 150px;
+                    left: -123px;
+                    width: 215px;
+                }
+                img:nth-child(4){
+                    position: absolute;
+                    top: 300px;
+                    right: -64px;
+                    width: 215px;
+                }
+                img:nth-child(5){
+                    position: absolute;
+                    top: 150px;
+                    right: 25px;
+                    width: 40px;
+                }
+                img:nth-child(7){
+                    position: absolute;
+                    top: 280px;
+                    left: -63px;
+                }
+            }
+            @include screen-size(phone-only){
+                img:nth-child(2){
+                    position: absolute;
+                    top: 10px;
+                    left: -15px;
+                    width: 100%;
+                }
+                img:nth-child(3){
+                    position: absolute;
+                    top: 65px;
+                    left: -43px;
+                    width: 90px;
+                }
+                img:nth-child(4){
+                    position: absolute;
+                    top: 135px;
+                    right: -44px;
+                    width: 90px;
+                }
+                img:nth-child(5){
+                    position: absolute;
+                    top: 60px;
+                    right: 5px;
+                    width: 20px;
+                }
+                img:nth-child(6){
+                    position: absolute;
+                    top: 0;
+                    left: -24px;
+                    width: 20px;
+                }
+                img:nth-child(7){
+                    position: absolute;
+                    top: 150px;
+                    left: -23px;
+                    width: 20px;
+                }
             }
         }
     }
     @include screen-size(desktop-only){
         display: block;
-        padding: 7em 2em 0;
+        padding: 7em 0 0;
+        height: 100%;
         &_left{
+            width: 100%;
+            max-width: 500px;
             margin: 0 auto 5em;
         }
         &_right{
+            width: 70%;
             margin: auto;
         }
     }
+    @include screen-size(tablet-only){
+        &_right{
+            width: 85%;
+        }
+    }
+    @include screen-size(phone-only){
+        &_right{
+            width: 100%;
+        }
+    }
+    @include screen-size(desktop-plus){
+        padding: 9em 1em 0;
+    }
+    @include screen-size(larger-screen){
+        padding: 0 13em;
+    }
+}
+.hide{
+    // display: none;
+    background-color: green;
+    width: 100%;
+    // transform: rotate(30deg);
+    transition: all 0.6s ease-in 0.3s;
 }
