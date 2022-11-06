@@ -1,0 +1,44 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.investify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    &_left{
+        &_container{
+            position: relative;
+            img:nth-child(1){
+                max-width: 256px;
+            }
+            img:nth-child(2){
+                position: absolute;
+                top: 200px;
+                left: -160px;
+                width: 100%;
+                z-index: -1;
+            }
+            img:nth-child(3){
+                position: absolute;
+                top: 0;
+                right: -40px;
+            }
+            @include screen-size(phone-only){
+                img:nth-child(2){
+                    display: none;
+                }
+                img:nth-child(3){
+                    display: none;
+                }
+            
+            }
+        }
+    }
+    &_right{
+    }
+    @include screen-size(desktop-only){
+        flex-direction: column;
+    }
+}

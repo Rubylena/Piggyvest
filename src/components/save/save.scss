@@ -11,4 +11,7 @@
         gap: 3em;
         flex-flow: row wrap;
     }
+    @include screen-size(desktop-only){
+        flex-flow: column nowrap;
+    }
 }

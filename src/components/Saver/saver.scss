@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.saver{
+    display: flex;
+    &_left{
+        width: 50%;
+        background: $secondary;
+    }
+    &_right{
+        width: 50%;
+        height: 400px;
+        background-image: url("https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/PHOTO_2022_08_02_17_33_57_af95edcdcb/PHOTO_2022_08_02_17_33_57_af95edcdcb.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center center;
+    }
+    @include screen-size(desktop-only){
+        flex-flow: column nowrap;
+        &_left{
+            width: 100%;
+        }
+        &_right{
+            width: 100%;
+        }
+    }
+}

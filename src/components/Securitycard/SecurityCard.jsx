@@ -1,8 +1,7 @@
 import React from 'react'
-import arrow from '../../assets/icon/arrow.svg'
 import './securitycard.scss'
 
-const SecurityCard = ({key, image, title, description, sub}) => {
+const SecurityCard = ({key, image, title, description, arrow, sub}) => {
   return (
     <div key={key} className='card'>
         <div className='card_img'><img src={image} alt={title}></img></div>
