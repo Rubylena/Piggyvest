@@ -15,7 +15,7 @@ const Index = () => {
             </div>
         </div>
         <div className='investify_right'>
-            <p>Up to 25% returns</p>
+            <p>Up to 25% Returns</p>
             <h2>Access investment opportunities</h2>
             <p>Invest securely and confidently on the go. Grow your money confidently by investing in pre-vetted investment opportunities.</p>
             <a href='https://www.piggyvest.com/investify'>Learn more about Investments &gt;</a>

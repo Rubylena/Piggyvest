@@ -14,6 +14,7 @@
         }
     }
     h4{
+        @include transition;
         font-size: 28px;
         margin: 0 0 0.3em;
     }
@@ -22,13 +23,28 @@
         line-height: 27.2px;
         margin: 0 0 2em;
     }
+
     a{
         text-decoration: none;
         color: $secondary;
         font-weight: 500;
-        &:hover{
-            border: 1px solid blue;
-            text-underline-position: below;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: linear-gradient(180deg,transparent 65%,#d0e2fc 0);
+            width: 100%;
+            transform: scaleX(0);
+            height: 20px;
+            bottom: 0;
+            left: 0;
+            transform-origin: bottom left;
+            transition: transform 0.4s ease-out;
+            z-index: -1;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
     }
     @include screen-size(desktop-only){
@@ -48,3 +64,14 @@
         }
     }
 }
+
+// @keyframes roll {
+//     0%{
+//         // background-size: 10%;
+//     }
+//     100%{
+//         // background-size: 20%;
+//         background-image: linear-gradient(180deg,transparent 65%,#d0e2fc 0);
+//         background-repeat: no-repeat;
+//     }
+// }

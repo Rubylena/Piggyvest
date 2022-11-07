@@ -23,6 +23,7 @@
 
 header{
         width: 100%;
+        @include transition;
     nav{
         .nav_arrange{
             display: flex;

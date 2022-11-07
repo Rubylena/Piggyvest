@@ -6,26 +6,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 5em;
+    padding: 10em 0 8em;
+    font-size: 1.03125em;
     &_left{
+        width: 50%;
         &_container{
             position: relative;
+            display: flex;
+            justify-content: flex-end;
             img:nth-child(1){
-                max-width: 256px;
+                max-width: 226px;
             }
             img:nth-child(2){
                 position: absolute;
-                top: 200px;
-                left: -160px;
-                width: 100%;
+                top: 140px;
+                left: 200px;
+                width: 250px;
                 z-index: -1;
             }
             img:nth-child(3){
                 position: absolute;
-                top: 0;
+                top: 35px;
                 right: -40px;
             }
-            @include screen-size(phone-only){
+            @include screen-size(desktop-only){
                 img:nth-child(2){
                     display: none;
                 }
@@ -37,8 +42,70 @@
         }
     }
     &_right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        h2{
+            font-size: 3.1875em;
+            line-height: 64.1px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            color: $investify;
+        }
+        p:nth-child(1){
+            background: $returns;
+            padding: 6px 22px;
+            border-radius: 40px;
+            width: fit-content;
+            font-weight: 700;
+            color: $investify;
+        }
+    }
+    @include screen-size(desktop-plus){
+        padding: 8em 0 6em;
+        &_left{
+            width: 40%;
+            &_container{
+                img:nth-child(1){
+                    max-width: 256px;
+                }
+                img:nth-child(2){
+                    top: 170px;
+                    left: -20px;
+                    width: 280px;
+                }
+            }
+        }
+        &_right{
+            max-width: 570px;
+        }
     }
     @include screen-size(desktop-only){
         flex-direction: column;
+        padding: 5em 0;
+        &_left{
+            width: 100%;
+            &_container{
+                justify-content: center;
+                img:nth-child(1){
+                    max-width: 256px;
+                    @include screen-size(phone-only){
+                        max-width: 220px;
+                    }
+                }
+            }
+        }
+        &_right{
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            h2{
+                font-size: 2.485em;
+                line-height: 54px;
+            }
+        }
     }
 }

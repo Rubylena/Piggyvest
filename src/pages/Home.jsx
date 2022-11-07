@@ -7,6 +7,7 @@ import Invest from '../components/Invest/Index'
 import Saver from '../components/Saver/Index'
 import Customers from '../components/Customers/Index'
 import Featured from '../components/Featured/Index'
+import Footer from '../components/Footer/Index'
 import './home.scss'
 
 const Home = () => {
@@ -19,11 +20,20 @@ const Home = () => {
       <div className='main_container'>
         <Investment />
         <Save />
+      </div>
+      <div className='customers'>
         <Invest />
+      </div>
         <Saver />
+      <div className='customers'>
         <Customers />
       </div>
+      <div className='featured'>
         <Featured />
+      </div>
+      <div className='footer'>
+        <Footer />
+      </div>
     </div>
   )
 }

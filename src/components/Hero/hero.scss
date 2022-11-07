@@ -16,6 +16,9 @@
         flex-direction: column;
         gap: 1.5em;
         width: 50%;
+        > *{
+            @include transition;
+        }
         @include screen-size(desktop-only){
             text-align: center;
         }
@@ -24,41 +27,13 @@
             line-height: 72px;
             font-weight: 700;
             font-family: U8-Bold;
+            visibility: hidden;
+            @include animateH1;
         }
         p{
             line-height: 27.2px;
             color: $light-brown;
-        }
-        .downloads{
-            display: flex;
-            gap: 1em;
-            a{
-                display: flex;
-                border: 1px solid $border;
-                text-decoration: none;
-                color: $primary;
-                padding: 0.5em 1em;
-                border-radius: 10px;
-                i{
-                    font-size: 26px;
-                }
-                img{
-                    width: 24px;
-                }
-                &:hover{
-                    border: 1px solid $secondary;
-                }
-                &:active{
-                    color: $secondary;
-                }
-            }
-            @include screen-size(phone-only){
-                flex-direction: column;
-                margin: auto;
-            }
-            @include screen-size(desktop-only){
-                justify-content: center;
-            }
+            @include animate1;
         }
         @include screen-size(desktop-only){
             h1{
@@ -77,8 +52,11 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            // transition: width 0.3s ease-in 1s;
             width: 70%;
+            > *{
+                @include transition;
+            }
+            @include animate1;
             img:nth-child(1){
                 position: relative;
                 top: 0;
@@ -90,18 +68,23 @@
                 top: 35px;
                 left: -45px;
                 width: 100%;
+                @include animate2;
             }
             img:nth-child(3){
+                @include animate3;
+                visibility: hidden;
                 position: absolute;
-                top: 170px;
+                top: 140px;
                 left: -143px;
                 width: 215px;
             }
             img:nth-child(4){
                 position: absolute;
-                top: 400px;
+                top: 350px;
                 right: -64px;
                 width: 215px;
+                visibility: hidden;
+                @include animate4;
             }
             img:nth-child(5){
                 position: absolute;
@@ -109,16 +92,22 @@
                 right: 25px;
                 width: 100%;
                 width: 40px;
+                visibility: hidden;
+                @include animate5;
             }
             img:nth-child(6){
                 position: absolute;
                 top: 0;
                 left: -81px;
+                visibility: hidden;
+                @include animate6;
             }
             img:nth-child(7){
                 position: absolute;
                 top: 352px;
                 left: -63px;
+                visibility: hidden;
+                @include animate7;
             }
             @include screen-size(tablet-only){
                 img:nth-child(3){
@@ -183,6 +172,9 @@
                     width: 20px;
                 }
             }
+            @include screen-size(larger-screen){
+                width: 60%;
+            }
         }
     }
     @include screen-size(desktop-only){
@@ -213,13 +205,6 @@
         padding: 9em 1em 0;
     }
     @include screen-size(larger-screen){
-        padding: 0 13em;
+        padding: 0 13em 0;
     }
-}
-.hide{
-    // display: none;
-    background-color: green;
-    width: 100%;
-    // transform: rotate(30deg);
-    transition: all 0.6s ease-in 0.3s;
 }

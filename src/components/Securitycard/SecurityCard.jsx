@@ -1,9 +1,9 @@
 import React from 'react'
 import './securitycard.scss'
 
-const SecurityCard = ({key, image, title, description, arrow, sub}) => {
+const SecurityCard = ({ href, image, title, description, arrow, sub}) => {
   return (
-    <div key={key} className='card'>
+    <a href={href}><div className='card'>
         <div className='card_img'><img src={image} alt={title}></img></div>
         <h5>{title}</h5>
         <p>{description}</p>
@@ -11,7 +11,7 @@ const SecurityCard = ({key, image, title, description, arrow, sub}) => {
             <img src={arrow} alt='arrow'></img>
             <span>{sub}</span>
         </div>
-    </div>
+    </div></a>
   )
 }
 

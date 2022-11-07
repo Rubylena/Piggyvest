@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mediaQueries.scss';
+@import '../../styles/transition.scss';
+
+.downloads{
+    display: flex;
+    gap: 1em;
+    a{
+        display: flex;
+        border: 1px solid $border;
+        text-decoration: none;
+        color: $primary;
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 12.82px;
+        i{
+            font-size: 26px;
+        }
+        img{
+            width: 24px;
+        }
+        &:hover{
+            border: 1px solid $secondary;
+        }
+        &:active{
+            color: $secondary;
+        }
+    }
+    @include screen-size(phone-only){
+        flex-direction: column;
+        margin: auto;
+    }
+    @include screen-size(desktop-only){
+        justify-content: center;
+    }
+}

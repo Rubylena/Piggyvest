@@ -4,7 +4,20 @@
 
 .security{
     display: flex;
-    gap: 2em;
+    gap: 1.5em;
+    padding: 5em 0 0;
+    &_left{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        gap: 1.5em;
+        padding: 3em 0 0 0;
+        h3{
+            font-size: 2.375em;
+            line-height: 48px;
+        }
+    }
     &_right{
         display: flex;
         justify-content: center;
@@ -13,5 +26,8 @@
     }
     @include screen-size(desktop-only){
         flex-flow: column nowrap;
+        &_left{
+            max-width: 300px;
+        }
     }
 }

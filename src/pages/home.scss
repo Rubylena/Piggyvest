@@ -3,8 +3,28 @@
 @import '../styles/transition.scss';
 
 .home_container{
+    .customers{
+        padding: 4em 8em 1em;
+        @include screen-size(desktop-plus){
+            padding: 3em 0.5em 1em;
+        }
+    }
     @include screen-size(desktop-only){
-        padding: 1.5em 2em;
+        .main_container, .footer{
+            padding: 4em 2em 1em;
+        }
+        .customers{
+            padding: 1.5em 2em;
+        }
+        .home_header_bg{
+            padding: 1.5em 2em 1em;
+        }
+        padding: 1.5em 0;
+    }
+    @include screen-size(phone-only){
+        .home_header_bg, .main_container, .footer{
+            padding: 4em 1em 1em;
+        }
     }
 }
 .home_header_bg{

@@ -7,17 +7,17 @@ import './featured.scss'
 const Index = () => {
   return (
     <div className='featured'>
-      <div><h4>As featured in</h4></div>
+      <h4 className='featured_left'>As featured in</h4>
       <div className='featured_right'>
-        <div>
+        <a href='https://techpoint.africa/2018/05/31/piggybank-secures-1-1-million-funding'><div>
         <img src={techpoint} alt='techpoint'></img>
-        </div>
-        <div>
+        </div></a>
+        <a href='https://guardian.ng/news/nigeria/piggybank-asserts-expansion-plans-becomes-piggyvest/'><div>
         <img src={guardian} alt='the guardian'></img>
-        </div>
-        <div>
+        </div></a>
+        <a href='https://techcrunch.com/2018/05/31/nigerias-piggybank-ng-raises-1-1m-announces-group-investment-product/'><div>
         <img src={crunch} alt='crunch'></img>
-        </div>
+        </div></a>
       </div>
     </div>
   )

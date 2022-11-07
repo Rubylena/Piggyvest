@@ -7,6 +7,34 @@
     &_left{
         width: 50%;
         background: $secondary;
+        padding: 0 11em 0 11em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        &_container{
+
+            p, h2, span {
+                color: $white;
+            }
+            h2{
+                font-size: 2.5625em;
+                line-height: 54px;
+            }
+            .sub{
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                margin-top: 1.5em;
+                font-weight: 700;
+            }
+            a{
+                text-decoration: none;
+            }
+            @include screen-size(desktop-plus){
+                padding: 0 8em 0 1em;
+            }
+        }
     }
     &_right{
         width: 50%;
@@ -17,6 +45,15 @@
         flex-flow: column nowrap;
         &_left{
             width: 100%;
+            padding: 4em 0em 4em 0em;
+            align-items: center;
+            text-align: center;
+            &_container{
+                max-width: 420px;
+                .sub{
+                    justify-content: center;
+                }
+            }
         }
         &_right{
             width: 100%;

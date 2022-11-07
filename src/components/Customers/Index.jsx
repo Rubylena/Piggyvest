@@ -4,6 +4,8 @@ import tobenna from '../../assets/img/tobena.jpeg'
 import micheal from '../../assets/img/micheal.jpeg'
 import oluwada from '../../assets/img/oluwada.jpg'
 import './customers.scss'
+import Bluebtn from '../button/Bluebtn'
+import Downloads from '../Downloads/Downloads'
 
 const Index = () => {
     const data = [
@@ -60,6 +62,7 @@ const Index = () => {
     <div className='customers'>
       <div className='customers_left'>
         {data.map((customer, index) => (
+            <div key={index} className='customers_left_fade'>
             <div className='testimony_box'>
                 <small>{customer.date}</small>
                 <div className='testimony_box_info'>
@@ -70,11 +73,14 @@ const Index = () => {
                     </div>
                 </div>
             </div>
+            </div>
         ))}
       </div>
       <div className='customers_right'>
         <h4>4 Million + customers</h4>
         <p>Since launching in 2016, over 4,000,000 people have used PiggyVest to manage their money better, avoid over-spending and be more accountable.</p>
+        <Bluebtn text='Create free account' />
+        <Downloads />
       </div>
     </div>
   )
