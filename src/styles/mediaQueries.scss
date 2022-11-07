@@ -11,7 +11,10 @@
     @else if $size == desktop-plus {
         @media (min-width: 991px) and (max-width: 1200px) {@content;}
     }
+    @else if $size == larger-midpoint {
+        @media (min-width: 1200px) and (max-width: 1400px) {@content;}
+    }
     @else if $size == larger-screen {
-        @media (min-width: 1200px) {@content;}
+        @media (min-width: 1400px) {@content;}
     }
 }

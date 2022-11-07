@@ -204,6 +204,9 @@
     @include screen-size(desktop-plus){
         padding: 9em 1em 0;
     }
+    @include screen-size(larger-midpoint){
+        padding: 9em 4em 0;
+    }
     @include screen-size(larger-screen){
         padding: 0 13em 0;
     }

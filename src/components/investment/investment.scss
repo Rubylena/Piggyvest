@@ -3,18 +3,17 @@
 @import '../../styles/transition.scss';
 
 .invest{
-    margin: 8em 3em 0 15em;
+    margin: 10em 3em 0 15em;
     display: flex;
     gap: 2em;
     align-items: center;
     &_image{
-        width: 150px;
+        width: 100px;
         img{
             width: 100%;
         }
     }
     h4{
-        @include transition;
         font-size: 28px;
         margin: 0 0 0.3em;
     }
@@ -64,14 +63,3 @@
         }
     }
 }
-
-// @keyframes roll {
-//     0%{
-//         // background-size: 10%;
-//     }
-//     100%{
-//         // background-size: 20%;
-//         background-image: linear-gradient(180deg,transparent 65%,#d0e2fc 0);
-//         background-repeat: no-repeat;
-//     }
-// }

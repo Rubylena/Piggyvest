@@ -59,4 +59,14 @@
             width: 100%;
         }
     }
+    @include screen-size(larger-midpoint){
+        &_left{
+            padding: 0 8em 0 8em;
+        }
+    }
+    @include screen-size(desktop-plus){
+        &_left{
+            padding: 0 2.5em 0 2.5em;
+        }
+    }
 }

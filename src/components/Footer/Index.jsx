@@ -6,9 +6,11 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 import './footer.scss'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Index = () => {
   return (
+    <AnimationOnScroll animateIn='animate__fadeInUp animate__delay-5ms'>
     <footer className='footer'>
         <div className='footer_top'>
             <div className='footer_top_left'>
@@ -55,6 +57,7 @@ const Index = () => {
             <p>Cloned by Grace Effiong</p>
         </div>
     </footer>
+    </AnimationOnScroll>
   )
 }
 

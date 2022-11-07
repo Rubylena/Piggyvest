@@ -19,10 +19,12 @@
         .home_header_bg{
             padding: 1.5em 2em 1em;
         }
-        padding: 1.5em 0;
     }
     @include screen-size(phone-only){
-        .home_header_bg, .main_container, .footer{
+        .home_header_bg{
+            padding: 1.5em 2em 1em;
+        }
+        .main_container, .footer{
             padding: 4em 1em 1em;
         }
     }
@@ -40,6 +42,12 @@
         background: -moz-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 66.5%,#f8f9fa 94.5%,#fff 94.5%,#fff 0);
         background: linear-gradient(90deg,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
     }
+    @include screen-size(larger-midpoint){
+        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(66.5%,#fff),color-stop(66.5%,#f8f9fa),color-stop(94.5%,#f8f9fa),color-stop(94.5%,#fff),color-stop(0,#fff));
+        background: -webkit-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+        background: -moz-linear-gradient(left,#fff,#fff 66.5%,#f8f9fa 66.5%,#f8f9fa 94.5%,#fff 94.5%,#fff 0);
+        background: linear-gradient(90deg,#fff,#fff 66.5%,#f8f9fa 0,#f8f9fa 94.5%,#fff 0,#fff 0);
+    }
 }
 .main_container{
     @include screen-size(desktop-plus){
@@ -47,5 +55,8 @@
     }
     @include screen-size(larger-screen){
         padding: 0 13em;
+    }
+    @include screen-size(larger-midpoint){
+        padding: 0 4em;
     }
 }

@@ -10,6 +10,7 @@ import arrow3 from '../../assets/icon/arrow3.svg'
 import arrow4 from '../../assets/icon/arrow4.svg'
 import './save.scss'
 import SecurityCard from '../Securitycard/SecurityCard'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Save = () => {
     const data = [
@@ -56,6 +57,7 @@ const Save = () => {
         <div className='security_right'>
             {data.map((card, index)=>(
                 <div key={index}>
+                <AnimationOnScroll animateIn='animate__fadeIn'>
                 <SecurityCard
                 href={card.href}
                 image={card.img} 
@@ -64,6 +66,7 @@ const Save = () => {
                 arrow={card.arrow}
                 sub={card.subTitle}
                 />
+                </AnimationOnScroll>
                 </div>
             ))}
         </div>

@@ -9,15 +9,22 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5em 13em;
+    padding: 1em 13em;
     -webkit-box-shadow: 0 0 7px 0 #ced3da;
     box-shadow: 0 0 7px 0 #ced3da;
     transition: background-color 0.1s ease-in, box-shadow 0.3s ease-in-out;
+   
     @include screen-size(desktop-only){
-        padding: 1.5em 2em;
+        padding: 1.5em 2em 0;
     }
     @include screen-size(desktop-plus){
-        padding: 1em 1em;
+        padding: 1.5em 1em 1em;
+    }
+    @include screen-size(larger-midpoint){
+        padding: 1em 3.5em;
+    }
+    @include screen-size(phone-only){
+        padding: 1.5em 2em 1em;
     }
 }
 
@@ -86,7 +93,7 @@ header{
                 li:nth-child(1){
                     border: 1px solid $border;
                     border-radius: 10px;
-                    padding: 1em 1.5em;
+                    padding: 0.8em 1.5em;
                     background: $white;
                     &:hover{
                         border: 1px solid $secondary;
@@ -101,7 +108,7 @@ header{
                 li:nth-child(2){
                     background: $primary;
                     border-radius: 10px;
-                    padding: 1em 1.5em;
+                    padding: 0.8em 1.5em;
                     a{
                         color: $white;
                         font-weight: 700;
@@ -134,6 +141,7 @@ header{
             }
         }
         .is-active{
+            @include transition;
             .bar:nth-child(1){
                 @include transform(45deg, 12px);
             }
@@ -202,7 +210,47 @@ header{
     @include screen-size(desktop-plus){
         padding: 1.5em 1em 0;
     }
+    @include screen-size(larger-midpoint){
+        padding: 1em 3.5em;
+    }
     @include screen-size(larger-screen){
         padding: 1em 13em;
+    }
+}
+
+.save__hover{
+    position: absolute;
+    top: 60px;
+    left: 150px;
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    box-shadow: 2px -3px 20px rgb(0 0 0 / 4%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: $white;
+    font-size: 0.8em;
+    @include transition;
+    a{
+        width: 170px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+        padding: 15px 20px 15px 15px;
+        font-weight: 500;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &:hover{
+            background: $card;
+            p{
+                color: $secondary;
+            }
+        }
+    }
+    .save__hover_box_img{
+        width: 20px;
+        img{
+            width: 100%;
+        }
     }
 }
