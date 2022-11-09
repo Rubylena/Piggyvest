@@ -8,6 +8,9 @@
         @include screen-size(desktop-plus){
             padding: 3em 0.5em 1em;
         }
+        @include screen-size(larger-midpoint){
+            padding: 4em 5em 1em;
+        }
     }
     @include screen-size(desktop-only){
         .main_container, .footer{
